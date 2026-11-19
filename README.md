@@ -222,4 +222,4 @@ https://doi.org/10.24432/C58885
 ---
 
 **GitHub Repository:**  
-https://github.com/Anantask/nlp-federated-spam-detection
+https://github.com/Anantask/nlp-federated-spam-detections
