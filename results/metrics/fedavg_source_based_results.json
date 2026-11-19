@@ -1,0 +1,188 @@
+{
+  "model_name": "Federated BiLSTM (FedAvg)",
+  "num_clients": 5,
+  "num_rounds": 15,
+  "total_time_sec": 21.51,
+  "final_metrics": {
+    "accuracy": 0.9556,
+    "macro_f1": 0.9555,
+    "weighted_f1": 0.9556,
+    "spam_precision": 0.9367,
+    "spam_recall": 0.9801,
+    "spam_f1": 0.9579,
+    "ham_precision": 0.9778,
+    "ham_recall": 0.9296,
+    "ham_f1": 0.9531,
+    "confusion_matrix": {
+      "tn": 132,
+      "fp": 10,
+      "fn": 3,
+      "tp": 148
+    },
+    "roc_auc": 0.9899,
+    "pr_auc": 0.9941
+  },
+  "communication_summary": {
+    "total_rounds": 15,
+    "cumulative_upload_bytes": 224605125,
+    "cumulative_download_bytes": 224605125,
+    "cumulative_total_bytes": 449210250,
+    "cumulative_upload_mb": 214.2,
+    "cumulative_download_mb": 214.2,
+    "cumulative_total_mb": 428.4,
+    "average_bytes_per_round": 29947350.0
+  },
+  "round_history": [
+    {
+      "round": 1,
+      "round_time_sec": 4.74,
+      "avg_client_loss": 0.5325,
+      "accuracy": 0.9283,
+      "macro_f1": 0.9283,
+      "spam_f1": 0.9293,
+      "roc_auc": 0.9684,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 2,
+      "round_time_sec": 1.42,
+      "avg_client_loss": 0.2393,
+      "accuracy": 0.9522,
+      "macro_f1": 0.9522,
+      "spam_f1": 0.9536,
+      "roc_auc": 0.9799,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 3,
+      "round_time_sec": 1.19,
+      "avg_client_loss": 0.1116,
+      "accuracy": 0.9556,
+      "macro_f1": 0.9555,
+      "spam_f1": 0.9577,
+      "roc_auc": 0.9869,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 4,
+      "round_time_sec": 1.06,
+      "avg_client_loss": 0.0766,
+      "accuracy": 0.959,
+      "macro_f1": 0.959,
+      "spam_f1": 0.9608,
+      "roc_auc": 0.9882,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 5,
+      "round_time_sec": 1.15,
+      "avg_client_loss": 0.0576,
+      "accuracy": 0.9693,
+      "macro_f1": 0.9693,
+      "spam_f1": 0.9701,
+      "roc_auc": 0.9886,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 6,
+      "round_time_sec": 1.12,
+      "avg_client_loss": 0.0526,
+      "accuracy": 0.959,
+      "macro_f1": 0.959,
+      "spam_f1": 0.9605,
+      "roc_auc": 0.9895,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 7,
+      "round_time_sec": 1.08,
+      "avg_client_loss": 0.0341,
+      "accuracy": 0.9625,
+      "macro_f1": 0.9624,
+      "spam_f1": 0.9637,
+      "roc_auc": 0.9904,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 8,
+      "round_time_sec": 1.27,
+      "avg_client_loss": 0.0418,
+      "accuracy": 0.9693,
+      "macro_f1": 0.9693,
+      "spam_f1": 0.9701,
+      "roc_auc": 0.991,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 9,
+      "round_time_sec": 1.12,
+      "avg_client_loss": 0.0241,
+      "accuracy": 0.9727,
+      "macro_f1": 0.9727,
+      "spam_f1": 0.9735,
+      "roc_auc": 0.9914,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 10,
+      "round_time_sec": 1.64,
+      "avg_client_loss": 0.0181,
+      "accuracy": 0.9625,
+      "macro_f1": 0.9624,
+      "spam_f1": 0.9639,
+      "roc_auc": 0.9906,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 11,
+      "round_time_sec": 1.2,
+      "avg_client_loss": 0.0237,
+      "accuracy": 0.9761,
+      "macro_f1": 0.9761,
+      "spam_f1": 0.9766,
+      "roc_auc": 0.991,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 12,
+      "round_time_sec": 1.04,
+      "avg_client_loss": 0.0302,
+      "accuracy": 0.9625,
+      "macro_f1": 0.9624,
+      "spam_f1": 0.9639,
+      "roc_auc": 0.9908,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 13,
+      "round_time_sec": 1.24,
+      "avg_client_loss": 0.0236,
+      "accuracy": 0.959,
+      "macro_f1": 0.959,
+      "spam_f1": 0.9608,
+      "roc_auc": 0.9908,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 14,
+      "round_time_sec": 1.06,
+      "avg_client_loss": 0.0158,
+      "accuracy": 0.9625,
+      "macro_f1": 0.9624,
+      "spam_f1": 0.9639,
+      "roc_auc": 0.9899,
+      "communication_kb": 29245.46
+    },
+    {
+      "round": 15,
+      "round_time_sec": 1.16,
+      "avg_client_loss": 0.0046,
+      "accuracy": 0.9556,
+      "macro_f1": 0.9555,
+      "spam_f1": 0.9579,
+      "roc_auc": 0.9899,
+      "communication_kb": 29245.46
+    }
+  ],
+  "partitioning_mode": "source_based"
+}

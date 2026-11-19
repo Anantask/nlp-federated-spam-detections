@@ -1,0 +1,21 @@
+# Differential Privacy and Mechanism Configuration
+privacy:
+  mechanism: "gaussian"
+  clipping_bound_C: 2.0 # Sensitivity / L2 clipping norm on transmitted prediction logits
+  noise_multiplier_sigma: 1.0 # Ratio of standard deviation of noise to clipping bound
+  delta: 1e-4 # Target delta for (epsilon, delta)-DP accounting
+  accountant: "rdp" # Options: "rdp" (Renyi Differential Privacy), "moments_accountant"
+
+ablation_privacy_grid:
+  - name: "no_noise"
+    sigma: 0.0
+    clip_C: 2.0
+  - name: "low_noise"
+    sigma: 0.5
+    clip_C: 2.0
+  - name: "medium_noise"
+    sigma: 1.0
+    clip_C: 2.0
+  - name: "high_noise"
+    sigma: 2.0
+    clip_C: 2.0

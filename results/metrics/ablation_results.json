@@ -1,0 +1,392 @@
+{
+  "no_dp_noise": {
+    "name": "No DP Noise (Reference)",
+    "config": {
+      "name": "No DP Noise (Reference)",
+      "key": "no_dp_noise",
+      "sigma": 0.0,
+      "gamma": 2.0,
+      "partitioning": "source_based"
+    },
+    "duration_sec": 109.01,
+    "final_metrics": {
+      "accuracy": 0.8294,
+      "macro_f1": 0.8231,
+      "weighted_f1": 0.8241,
+      "spam_precision": 0.7563,
+      "spam_recall": 0.9868,
+      "spam_f1": 0.8563,
+      "ham_precision": 0.9792,
+      "ham_recall": 0.662,
+      "ham_f1": 0.7899,
+      "confusion_matrix": {
+        "tn": 94,
+        "fp": 48,
+        "fn": 2,
+        "tp": 149
+      },
+      "roc_auc": 0.9785,
+      "pr_auc": 0.9808
+    },
+    "best_round": 4,
+    "best_round_metrics": {
+      "round": 4,
+      "round_time_sec": 15.58,
+      "distill_loss": 0.0004,
+      "accuracy": 0.901,
+      "macro_f1": 0.9001,
+      "spam_f1": 0.9097,
+      "roc_auc": 0.974,
+      "epsilon": "Infinity (No Noise Reference)",
+      "communication_kb": 66.14
+    },
+    "privacy_guarantee": {
+      "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+      "formal_dp_guarantee": false,
+      "epsilon": "Infinity (No Noise Reference)",
+      "delta": 0.0001,
+      "noise_multiplier_sigma": 0.0,
+      "clipping_bound_C": 2.0,
+      "num_communication_rounds_T": 5,
+      "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+      "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+      "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+      "audit_statement": "Noise multiplier sigma=0.0; no privacy guarantee provided (baseline reference)."
+    },
+    "communication_summary": {
+      "total_rounds": 5,
+      "cumulative_upload_bytes": 33200,
+      "cumulative_download_bytes": 305450,
+      "cumulative_total_bytes": 338650,
+      "cumulative_upload_mb": 0.032,
+      "cumulative_download_mb": 0.291,
+      "cumulative_total_mb": 0.323,
+      "average_bytes_per_round": 67730.0
+    }
+  },
+  "low_dp_noise": {
+    "name": "Low DP Noise (sigma=0.5)",
+    "config": {
+      "name": "Low DP Noise (sigma=0.5)",
+      "key": "low_dp_noise",
+      "sigma": 0.5,
+      "gamma": 2.0,
+      "partitioning": "source_based"
+    },
+    "duration_sec": 160.38,
+    "final_metrics": {
+      "accuracy": 0.7543,
+      "macro_f1": 0.7466,
+      "weighted_f1": 0.7479,
+      "spam_precision": 0.7047,
+      "spam_recall": 0.9007,
+      "spam_f1": 0.7907,
+      "ham_precision": 0.85,
+      "ham_recall": 0.5986,
+      "ham_f1": 0.7025,
+      "confusion_matrix": {
+        "tn": 85,
+        "fp": 57,
+        "fn": 15,
+        "tp": 136
+      },
+      "roc_auc": 0.8411,
+      "pr_auc": 0.8403
+    },
+    "best_round": 1,
+    "best_round_metrics": {
+      "round": 1,
+      "round_time_sec": 23.53,
+      "distill_loss": 0.0405,
+      "accuracy": 0.8771,
+      "macro_f1": 0.877,
+      "spam_f1": 0.8816,
+      "roc_auc": 0.948,
+      "epsilon": 10.5839,
+      "communication_kb": 66.14
+    },
+    "privacy_guarantee": {
+      "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+      "formal_dp_guarantee": true,
+      "epsilon": 29.1941,
+      "delta": 0.0001,
+      "noise_multiplier_sigma": 0.5,
+      "clipping_bound_C": 2.0,
+      "num_communication_rounds_T": 5,
+      "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+      "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+      "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+      "audit_statement": "Guarantees (29.1941, 0.0001)-DP under RDP composition across 5 rounds."
+    },
+    "communication_summary": {
+      "total_rounds": 5,
+      "cumulative_upload_bytes": 33200,
+      "cumulative_download_bytes": 305450,
+      "cumulative_total_bytes": 338650,
+      "cumulative_upload_mb": 0.032,
+      "cumulative_download_mb": 0.291,
+      "cumulative_total_mb": 0.323,
+      "average_bytes_per_round": 67730.0
+    }
+  },
+  "primary_setting": {
+    "name": "Primary Setting (sigma=1.0, gamma=2.0)",
+    "config": {
+      "name": "Primary Setting (sigma=1.0, gamma=2.0)",
+      "key": "primary_setting",
+      "sigma": 1.0,
+      "gamma": 2.0,
+      "partitioning": "source_based"
+    },
+    "duration_sec": 177.54,
+    "final_metrics": {
+      "accuracy": 0.686,
+      "macro_f1": 0.6847,
+      "weighted_f1": 0.6853,
+      "spam_precision": 0.6832,
+      "spam_recall": 0.7285,
+      "spam_f1": 0.7051,
+      "ham_precision": 0.6894,
+      "ham_recall": 0.6408,
+      "ham_f1": 0.6642,
+      "confusion_matrix": {
+        "tn": 91,
+        "fp": 51,
+        "fn": 41,
+        "tp": 110
+      },
+      "roc_auc": 0.7495,
+      "pr_auc": 0.7115
+    },
+    "best_round": 1,
+    "best_round_metrics": {
+      "round": 1,
+      "round_time_sec": 24.97,
+      "distill_loss": 0.1487,
+      "accuracy": 0.8464,
+      "macro_f1": 0.8425,
+      "spam_f1": 0.8673,
+      "roc_auc": 0.9428,
+      "epsilon": 4.7919,
+      "communication_kb": 66.14
+    },
+    "privacy_guarantee": {
+      "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+      "formal_dp_guarantee": true,
+      "epsilon": 12.0971,
+      "delta": 0.0001,
+      "noise_multiplier_sigma": 1.0,
+      "clipping_bound_C": 2.0,
+      "num_communication_rounds_T": 5,
+      "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+      "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+      "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+      "audit_statement": "Guarantees (12.0971, 0.0001)-DP under RDP composition across 5 rounds."
+    },
+    "communication_summary": {
+      "total_rounds": 5,
+      "cumulative_upload_bytes": 33200,
+      "cumulative_download_bytes": 305450,
+      "cumulative_total_bytes": 338650,
+      "cumulative_upload_mb": 0.032,
+      "cumulative_download_mb": 0.291,
+      "cumulative_total_mb": 0.323,
+      "average_bytes_per_round": 67730.0
+    }
+  },
+  "high_dp_noise": {
+    "name": "High DP Noise (sigma=2.0)",
+    "config": {
+      "name": "High DP Noise (sigma=2.0)",
+      "key": "high_dp_noise",
+      "sigma": 2.0,
+      "gamma": 2.0,
+      "partitioning": "source_based"
+    },
+    "duration_sec": 154.47,
+    "final_metrics": {
+      "accuracy": 0.5256,
+      "macro_f1": 0.441,
+      "weighted_f1": 0.4343,
+      "spam_precision": 0.7143,
+      "spam_recall": 0.1325,
+      "spam_f1": 0.2235,
+      "ham_precision": 0.5057,
+      "ham_recall": 0.9437,
+      "ham_f1": 0.6585,
+      "confusion_matrix": {
+        "tn": 134,
+        "fp": 8,
+        "fn": 131,
+        "tp": 20
+      },
+      "roc_auc": 0.774,
+      "pr_auc": 0.7455
+    },
+    "best_round": 1,
+    "best_round_metrics": {
+      "round": 1,
+      "round_time_sec": 22.66,
+      "distill_loss": 0.4705,
+      "accuracy": 0.7338,
+      "macro_f1": 0.714,
+      "spam_f1": 0.7892,
+      "roc_auc": 0.9332,
+      "epsilon": 2.271,
+      "communication_kb": 66.14
+    },
+    "privacy_guarantee": {
+      "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+      "formal_dp_guarantee": true,
+      "epsilon": 5.4235,
+      "delta": 0.0001,
+      "noise_multiplier_sigma": 2.0,
+      "clipping_bound_C": 2.0,
+      "num_communication_rounds_T": 5,
+      "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+      "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+      "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+      "audit_statement": "Guarantees (5.4235, 0.0001)-DP under RDP composition across 5 rounds."
+    },
+    "communication_summary": {
+      "total_rounds": 5,
+      "cumulative_upload_bytes": 33200,
+      "cumulative_download_bytes": 305450,
+      "cumulative_total_bytes": 338650,
+      "cumulative_upload_mb": 0.032,
+      "cumulative_download_mb": 0.291,
+      "cumulative_total_mb": 0.323,
+      "average_bytes_per_round": 67730.0
+    }
+  },
+  "no_focal_loss": {
+    "name": "Without Focal Loss (gamma=0.0 Cross-Entropy)",
+    "config": {
+      "name": "Without Focal Loss (gamma=0.0 Cross-Entropy)",
+      "key": "no_focal_loss",
+      "sigma": 1.0,
+      "gamma": 0.0,
+      "partitioning": "source_based"
+    },
+    "duration_sec": 153.83,
+    "final_metrics": {
+      "accuracy": 0.7304,
+      "macro_f1": 0.7223,
+      "weighted_f1": 0.7237,
+      "spam_precision": 0.6875,
+      "spam_recall": 0.8742,
+      "spam_f1": 0.7697,
+      "ham_precision": 0.8119,
+      "ham_recall": 0.5775,
+      "ham_f1": 0.6749,
+      "confusion_matrix": {
+        "tn": 82,
+        "fp": 60,
+        "fn": 19,
+        "tp": 132
+      },
+      "roc_auc": 0.7937,
+      "pr_auc": 0.7996
+    },
+    "best_round": 1,
+    "best_round_metrics": {
+      "round": 1,
+      "round_time_sec": 22.57,
+      "distill_loss": 0.1487,
+      "accuracy": 0.8225,
+      "macro_f1": 0.8165,
+      "spam_f1": 0.8497,
+      "roc_auc": 0.9399,
+      "epsilon": 4.7919,
+      "communication_kb": 66.14
+    },
+    "privacy_guarantee": {
+      "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+      "formal_dp_guarantee": true,
+      "epsilon": 12.0971,
+      "delta": 0.0001,
+      "noise_multiplier_sigma": 1.0,
+      "clipping_bound_C": 2.0,
+      "num_communication_rounds_T": 5,
+      "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+      "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+      "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+      "audit_statement": "Guarantees (12.0971, 0.0001)-DP under RDP composition across 5 rounds."
+    },
+    "communication_summary": {
+      "total_rounds": 5,
+      "cumulative_upload_bytes": 33200,
+      "cumulative_download_bytes": 305450,
+      "cumulative_total_bytes": 338650,
+      "cumulative_upload_mb": 0.032,
+      "cumulative_download_mb": 0.291,
+      "cumulative_total_mb": 0.323,
+      "average_bytes_per_round": 67730.0
+    }
+  },
+  "controlled_non_iid": {
+    "name": "Controlled Non-IID Dirichlet (alpha=0.5)",
+    "config": {
+      "name": "Controlled Non-IID Dirichlet (alpha=0.5)",
+      "key": "controlled_non_iid",
+      "sigma": 1.0,
+      "gamma": 2.0,
+      "partitioning": "controlled_non_iid"
+    },
+    "duration_sec": 158.47,
+    "final_metrics": {
+      "accuracy": 0.5768,
+      "macro_f1": 0.5059,
+      "weighted_f1": 0.5001,
+      "spam_precision": 0.9355,
+      "spam_recall": 0.1921,
+      "spam_f1": 0.3187,
+      "ham_precision": 0.5344,
+      "ham_recall": 0.9859,
+      "ham_f1": 0.6931,
+      "confusion_matrix": {
+        "tn": 140,
+        "fp": 2,
+        "fn": 122,
+        "tp": 29
+      },
+      "roc_auc": 0.7256,
+      "pr_auc": 0.7424
+    },
+    "best_round": 2,
+    "best_round_metrics": {
+      "round": 2,
+      "round_time_sec": 22.91,
+      "distill_loss": 0.3153,
+      "accuracy": 0.8498,
+      "macro_f1": 0.8459,
+      "spam_f1": 0.8706,
+      "roc_auc": 0.9343,
+      "epsilon": 7.0697,
+      "communication_kb": 66.14
+    },
+    "privacy_guarantee": {
+      "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+      "formal_dp_guarantee": true,
+      "epsilon": 12.0971,
+      "delta": 0.0001,
+      "noise_multiplier_sigma": 1.0,
+      "clipping_bound_C": 2.0,
+      "num_communication_rounds_T": 5,
+      "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+      "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+      "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+      "audit_statement": "Guarantees (12.0971, 0.0001)-DP under RDP composition across 5 rounds."
+    },
+    "communication_summary": {
+      "total_rounds": 5,
+      "cumulative_upload_bytes": 33200,
+      "cumulative_download_bytes": 305450,
+      "cumulative_total_bytes": 338650,
+      "cumulative_upload_mb": 0.032,
+      "cumulative_download_mb": 0.291,
+      "cumulative_total_mb": 0.323,
+      "average_bytes_per_round": 67730.0
+    }
+  }
+}

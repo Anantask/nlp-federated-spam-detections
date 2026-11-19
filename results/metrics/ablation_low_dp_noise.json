@@ -1,0 +1,171 @@
+{
+  "model_name": "Fed-DistilDP (Proposed)",
+  "num_clients": 5,
+  "num_rounds": 5,
+  "local_epochs": 2,
+  "distillation_epochs": 2,
+  "focal_gamma": 2.0,
+  "noise_multiplier_sigma": 0.5,
+  "clipping_bound_C": 2.0,
+  "temperature": 2.0,
+  "total_time_sec": 148.23,
+  "final_metrics": {
+    "accuracy": 0.7543,
+    "macro_f1": 0.7466,
+    "weighted_f1": 0.7479,
+    "spam_precision": 0.7047,
+    "spam_recall": 0.9007,
+    "spam_f1": 0.7907,
+    "ham_precision": 0.85,
+    "ham_recall": 0.5986,
+    "ham_f1": 0.7025,
+    "confusion_matrix": {
+      "tn": 85,
+      "fp": 57,
+      "fn": 15,
+      "tp": 136
+    },
+    "roc_auc": 0.8411,
+    "pr_auc": 0.8403
+  },
+  "best_round": 1,
+  "best_round_metrics": {
+    "round": 1,
+    "round_time_sec": 23.53,
+    "distill_loss": 0.0405,
+    "accuracy": 0.8771,
+    "macro_f1": 0.877,
+    "spam_f1": 0.8816,
+    "roc_auc": 0.948,
+    "epsilon": 10.5839,
+    "communication_kb": 66.14
+  },
+  "privacy_guarantee": {
+    "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+    "formal_dp_guarantee": true,
+    "epsilon": 29.1941,
+    "delta": 0.0001,
+    "noise_multiplier_sigma": 0.5,
+    "clipping_bound_C": 2.0,
+    "num_communication_rounds_T": 5,
+    "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+    "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+    "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+    "audit_statement": "Guarantees (29.1941, 0.0001)-DP under RDP composition across 5 rounds."
+  },
+  "communication_summary": {
+    "total_rounds": 5,
+    "cumulative_upload_bytes": 33200,
+    "cumulative_download_bytes": 305450,
+    "cumulative_total_bytes": 338650,
+    "cumulative_upload_mb": 0.032,
+    "cumulative_download_mb": 0.291,
+    "cumulative_total_mb": 0.323,
+    "average_bytes_per_round": 67730.0
+  },
+  "client_training_summaries": [
+    {
+      "client_id": 0,
+      "client_name": "Psy",
+      "train_loss": 0.0817,
+      "class_weights": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "client_id": 1,
+      "client_name": "KatyPerry",
+      "train_loss": 0.0804,
+      "class_weights": [
+        0.502283105022831,
+        0.4977168949771689
+      ]
+    },
+    {
+      "client_id": 2,
+      "client_name": "LMFAO",
+      "train_loss": 0.0787,
+      "class_weights": [
+        0.5384615384615384,
+        0.46153846153846156
+      ]
+    },
+    {
+      "client_id": 3,
+      "client_name": "Eminem",
+      "train_loss": 0.0782,
+      "class_weights": [
+        0.5434782608695652,
+        0.45652173913043476
+      ]
+    },
+    {
+      "client_id": 4,
+      "client_name": "Shakira",
+      "train_loss": 0.0767,
+      "class_weights": [
+        0.47186147186147187,
+        0.5281385281385281
+      ]
+    }
+  ],
+  "round_history": [
+    {
+      "round": 1,
+      "round_time_sec": 23.53,
+      "distill_loss": 0.0405,
+      "accuracy": 0.8771,
+      "macro_f1": 0.877,
+      "spam_f1": 0.8816,
+      "roc_auc": 0.948,
+      "epsilon": 10.5839,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 2,
+      "round_time_sec": 25.86,
+      "distill_loss": 0.0495,
+      "accuracy": 0.8157,
+      "macro_f1": 0.8099,
+      "spam_f1": 0.843,
+      "roc_auc": 0.9114,
+      "epsilon": 16.1394,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 3,
+      "round_time_sec": 23.41,
+      "distill_loss": 0.0522,
+      "accuracy": 0.7201,
+      "macro_f1": 0.7201,
+      "spam_f1": 0.7192,
+      "roc_auc": 0.805,
+      "epsilon": 20.8677,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 4,
+      "round_time_sec": 23.24,
+      "distill_loss": 0.0527,
+      "accuracy": 0.6724,
+      "macro_f1": 0.6719,
+      "spam_f1": 0.6596,
+      "roc_auc": 0.7055,
+      "epsilon": 25.1677,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 5,
+      "round_time_sec": 24.93,
+      "distill_loss": 0.0542,
+      "accuracy": 0.7543,
+      "macro_f1": 0.7466,
+      "spam_f1": 0.7907,
+      "roc_auc": 0.8411,
+      "epsilon": 29.1941,
+      "communication_kb": 66.14
+    }
+  ],
+  "partitioning_mode": "source_based"
+}

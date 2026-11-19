@@ -1,0 +1,92 @@
+[
+  {
+    "model_comparison": "Centralized DistilBERT vs. TF-IDF + Logistic Regression",
+    "metric_a": 0.9863,
+    "metric_b": 0.9761,
+    "accuracy_difference": 0.0102,
+    "diff_95_ci": [
+      -0.0102,
+      0.0307
+    ],
+    "bootstrap_p_value": 0.478,
+    "mcnemar_chi2": 0.3636,
+    "mcnemar_p_value": 0.5465,
+    "statistically_significant_at_05": false,
+    "interpretation": "The difference (0.0102) is not statistically significant (95% CI spans zero: [-0.0102, 0.0307])."
+  },
+  {
+    "model_comparison": "Centralized DistilBERT vs. Centralized BiLSTM",
+    "metric_a": 0.9863,
+    "metric_b": 0.9659,
+    "accuracy_difference": 0.0205,
+    "diff_95_ci": [
+      0.0067,
+      0.0375
+    ],
+    "bootstrap_p_value": 0.006,
+    "mcnemar_chi2": 4.1667,
+    "mcnemar_p_value": 0.0412,
+    "statistically_significant_at_05": true,
+    "interpretation": "The difference (0.0205) is statistically significant at p < 0.006."
+  },
+  {
+    "model_comparison": "Centralized DistilBERT vs. FedAvg + BiLSTM",
+    "metric_a": 0.9863,
+    "metric_b": 0.9556,
+    "accuracy_difference": 0.0307,
+    "diff_95_ci": [
+      0.0137,
+      0.0512
+    ],
+    "bootstrap_p_value": 0.0,
+    "mcnemar_chi2": 7.1111,
+    "mcnemar_p_value": 0.0077,
+    "statistically_significant_at_05": true,
+    "interpretation": "The difference (0.0307) is statistically significant at p < 0.0."
+  },
+  {
+    "model_comparison": "FedAvg + BiLSTM vs. Centralized BiLSTM",
+    "metric_a": 0.9556,
+    "metric_b": 0.9659,
+    "accuracy_difference": -0.0102,
+    "diff_95_ci": [
+      -0.0239,
+      0.0
+    ],
+    "bootstrap_p_value": 0.092,
+    "mcnemar_chi2": 1.3333,
+    "mcnemar_p_value": 0.2482,
+    "statistically_significant_at_05": false,
+    "interpretation": "The difference (-0.0102) is not statistically significant (95% CI spans zero: [-0.0239, 0.0])."
+  },
+  {
+    "model_comparison": "FedAvg + BiLSTM vs. Fed-DistilDP (Peak R1)",
+    "metric_a": 0.9556,
+    "metric_b": 0.8464,
+    "accuracy_difference": 0.1092,
+    "diff_95_ci": [
+      0.0614,
+      0.1536
+    ],
+    "bootstrap_p_value": 0.0,
+    "mcnemar_chi2": 17.7963,
+    "mcnemar_p_value": 0.0,
+    "statistically_significant_at_05": true,
+    "interpretation": "The difference (0.1092) is statistically significant at p < 0.0."
+  },
+  {
+    "model_comparison": "FedAvg + BiLSTM vs. Fed-DistilDP (Final R10)",
+    "metric_a": 0.9556,
+    "metric_b": 0.4846,
+    "accuracy_difference": 0.471,
+    "diff_95_ci": [
+      0.4061,
+      0.5324
+    ],
+    "bootstrap_p_value": 0.0,
+    "mcnemar_chi2": 118.7911,
+    "mcnemar_p_value": 0.0,
+    "statistically_significant_at_05": true,
+    "interpretation": "The difference (0.471) is statistically significant at p < 0.0."
+  }
+]

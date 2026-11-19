@@ -1,0 +1,38 @@
+# Federated Learning Configuration
+seed: 42
+
+clients:
+  num_clients: 5
+  client_names:
+    - "Psy"
+    - "KatyPerry"
+    - "LMFAO"
+    - "Eminem"
+    - "Shakira"
+  partitioning:
+    mode: "source_based" # Options: "source_based", "controlled_non_iid"
+    dirichlet_alpha: 0.5 # For controlled non-IID label skew experiment
+
+fedavg_lstm:
+  rounds: 15
+  local_epochs: 3
+  batch_size: 32
+  learning_rate: 0.002
+  aggregation: "sample_weighted"
+
+fed_distildp:
+  rounds: 10
+  local_epochs: 2
+  batch_size: 16
+  local_lr: 3e-5
+  student_lr: 5e-5
+  distillation_temperature: 2.0
+  distillation_loss: "kl_div" # Options: "kl_div", "mse"
+  distillation_alpha: 0.7 # Weight for soft distillation target vs hard labels (if available)
+  focal_loss:
+    enabled: true
+    gamma: 2.0
+    alpha: "auto" # Class-frequency weighted
+  auxiliary_dataset:
+    source: "train_auxiliary_partition" # Safe partition strictly carved out of training set
+    size: 150

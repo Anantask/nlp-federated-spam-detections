@@ -1,0 +1,52 @@
+# Dataset configuration for YouTube Spam Collection
+dataset:
+  name: "YouTube Spam Collection"
+  citation: "Alberto, T. & Lochter, J. (2015). YouTube Spam Collection. UCI Machine Learning Repository."
+  doi: "https://doi.org/10.24432/C58885"
+  download_url: "https://archive.ics.uci.edu/static/public/380/youtube+spam+collection.zip"
+  raw_dir: "data/raw"
+  fallback_dir: "data"
+  processed_dir: "data/processed"
+  processed_filename: "youtube_spam_cleaned.csv"
+  splits_filename: "splits_assignment.csv"
+  
+  files:
+    - "Youtube01-Psy.csv"
+    - "Youtube02-KatyPerry.csv"
+    - "Youtube03-LMFAO.csv"
+    - "Youtube04-Eminem.csv"
+    - "Youtube05-Shakira.csv"
+
+  video_mapping:
+    "Youtube01-Psy.csv": "Psy"
+    "Youtube02-KatyPerry.csv": "KatyPerry"
+    "Youtube03-LMFAO.csv": "LMFAO"
+    "Youtube04-Eminem.csv": "Eminem"
+    "Youtube05-Shakira.csv": "Shakira"
+
+  columns:
+    comment_id: "COMMENT_ID"
+    author: "AUTHOR"
+    date: "DATE"
+    content: "CONTENT"
+    class_label: "CLASS"
+    target: "label"
+    video_source: "video_source"
+    processed_content: "processed_content"
+
+  labels:
+    ham: 0
+    spam: 1
+
+  cleaning:
+    remove_exact_duplicates: true
+    strip_whitespace: true
+    min_content_length: 1
+
+splitting:
+  random_seed: 42
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  stratify_by: ["video_source", "label"]
+  public_auxiliary_ratio: 0.10 # Portion of training split reserved for auxiliary public distillation set

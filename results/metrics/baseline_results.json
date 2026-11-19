@@ -1,0 +1,137 @@
+{
+  "tfidf_logistic_regression": {
+    "model_name": "TF-IDF + Logistic Regression",
+    "model_type": "logistic_regression",
+    "train_time_sec": 0.116,
+    "inference_time_sec": 0.0093,
+    "inference_per_sample_ms": 0.032,
+    "model_size_kb": 132.9,
+    "metrics": {
+      "accuracy": 0.9761,
+      "macro_f1": 0.9761,
+      "weighted_f1": 0.9761,
+      "spam_precision": 0.9865,
+      "spam_recall": 0.9669,
+      "spam_f1": 0.9766,
+      "ham_precision": 0.9655,
+      "ham_recall": 0.9859,
+      "ham_f1": 0.9756,
+      "confusion_matrix": {
+        "tn": 140,
+        "fp": 2,
+        "fn": 5,
+        "tp": 146
+      },
+      "roc_auc": 0.9921,
+      "pr_auc": 0.9944
+    }
+  },
+  "tfidf_linear_svm": {
+    "model_name": "TF-IDF + Linear Svm",
+    "model_type": "linear_svm",
+    "train_time_sec": 0.1356,
+    "inference_time_sec": 0.0245,
+    "inference_per_sample_ms": 0.084,
+    "model_size_kb": 179.75,
+    "metrics": {
+      "accuracy": 0.959,
+      "macro_f1": 0.9589,
+      "weighted_f1": 0.959,
+      "spam_precision": 0.9427,
+      "spam_recall": 0.9801,
+      "spam_f1": 0.961,
+      "ham_precision": 0.9779,
+      "ham_recall": 0.9366,
+      "ham_f1": 0.9568,
+      "confusion_matrix": {
+        "tn": 133,
+        "fp": 9,
+        "fn": 3,
+        "tp": 148
+      },
+      "roc_auc": 0.9927,
+      "pr_auc": 0.9947
+    }
+  },
+  "centralized_bilstm": {
+    "model_name": "Centralized BiLSTM",
+    "model_type": "lstm",
+    "train_time_sec": 11.3354,
+    "inference_time_sec": 0.0472,
+    "inference_per_sample_ms": 0.161,
+    "model_size_kb": 2920.76,
+    "device": "cuda",
+    "metrics": {
+      "accuracy": 0.9659,
+      "macro_f1": 0.9658,
+      "weighted_f1": 0.9658,
+      "spam_precision": 0.949,
+      "spam_recall": 0.9868,
+      "spam_f1": 0.9675,
+      "ham_precision": 0.9853,
+      "ham_recall": 0.9437,
+      "ham_f1": 0.964,
+      "confusion_matrix": {
+        "tn": 134,
+        "fp": 8,
+        "fn": 2,
+        "tp": 149
+      },
+      "roc_auc": 0.9944,
+      "pr_auc": 0.9961
+    },
+    "training_history": {
+      "train_loss": [
+        0.6178,
+        0.3463,
+        0.1874,
+        0.1383,
+        0.1202,
+        0.0895,
+        0.0709,
+        0.0967,
+        0.0568,
+        0.0512,
+        0.0317,
+        0.034,
+        0.0234,
+        0.0174,
+        0.0144
+      ],
+      "val_loss": [
+        0.4605,
+        0.2184,
+        0.1719,
+        0.1756,
+        0.1612,
+        0.154,
+        0.1622,
+        0.1599,
+        0.1602,
+        0.1581,
+        0.1777,
+        0.1687,
+        0.1837,
+        0.1925,
+        0.2519
+      ],
+      "val_macro_f1": [
+        0.8729,
+        0.9146,
+        0.9249,
+        0.9317,
+        0.9317,
+        0.942,
+        0.9385,
+        0.942,
+        0.942,
+        0.9522,
+        0.9454,
+        0.9454,
+        0.9454,
+        0.9386,
+        0.9385
+      ]
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "model_name": "Fed-DistilDP (Proposed)",
+  "num_clients": 5,
+  "num_rounds": 10,
+  "local_epochs": 2,
+  "distillation_epochs": 2,
+  "focal_gamma": 2.0,
+  "noise_multiplier_sigma": 1.0,
+  "clipping_bound_C": 2.0,
+  "temperature": 2.0,
+  "total_time_sec": 177.31,
+  "final_metrics": {
+    "accuracy": 0.4846,
+    "macro_f1": 0.3264,
+    "weighted_f1": 0.3164,
+    "spam_precision": 0.0,
+    "spam_recall": 0.0,
+    "spam_f1": 0.0,
+    "ham_precision": 0.4846,
+    "ham_recall": 1.0,
+    "ham_f1": 0.6529,
+    "confusion_matrix": {
+      "tn": 142,
+      "fp": 0,
+      "fn": 151,
+      "tp": 0
+    },
+    "roc_auc": 0.5361,
+    "pr_auc": 0.5259
+  },
+  "best_round": 1,
+  "best_round_metrics": {
+    "round": 1,
+    "round_time_sec": 15.48,
+    "distill_loss": 0.1487,
+    "accuracy": 0.8464,
+    "macro_f1": 0.8425,
+    "spam_f1": 0.8673,
+    "roc_auc": 0.9428,
+    "epsilon": 4.7919,
+    "communication_kb": 66.14
+  },
+  "privacy_guarantee": {
+    "mechanism": "Gaussian Mechanism on L2-Clipped Logits",
+    "formal_dp_guarantee": true,
+    "epsilon": 18.5723,
+    "delta": 0.0001,
+    "noise_multiplier_sigma": 1.0,
+    "clipping_bound_C": 2.0,
+    "num_communication_rounds_T": 10,
+    "adjacency_definition": "Bounded client logits over auxiliary dataset; replace one client partition",
+    "sensitivity_assumption": "L2 sensitivity bounded by C = 2.0",
+    "composition_accountant": "R\u00e9nyi Differential Privacy (RDP) composed over T releases",
+    "audit_statement": "Guarantees (18.5723, 0.0001)-DP under RDP composition across 10 rounds."
+  },
+  "communication_summary": {
+    "total_rounds": 10,
+    "cumulative_upload_bytes": 66400,
+    "cumulative_download_bytes": 610900,
+    "cumulative_total_bytes": 677300,
+    "cumulative_upload_mb": 0.063,
+    "cumulative_download_mb": 0.583,
+    "cumulative_total_mb": 0.646,
+    "average_bytes_per_round": 67730.0
+  },
+  "client_training_summaries": [
+    {
+      "client_id": 0,
+      "client_name": "Psy",
+      "train_loss": 0.0817,
+      "class_weights": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "client_id": 1,
+      "client_name": "KatyPerry",
+      "train_loss": 0.0804,
+      "class_weights": [
+        0.502283105022831,
+        0.4977168949771689
+      ]
+    },
+    {
+      "client_id": 2,
+      "client_name": "LMFAO",
+      "train_loss": 0.0787,
+      "class_weights": [
+        0.5384615384615384,
+        0.46153846153846156
+      ]
+    },
+    {
+      "client_id": 3,
+      "client_name": "Eminem",
+      "train_loss": 0.0782,
+      "class_weights": [
+        0.5434782608695652,
+        0.45652173913043476
+      ]
+    },
+    {
+      "client_id": 4,
+      "client_name": "Shakira",
+      "train_loss": 0.0767,
+      "class_weights": [
+        0.47186147186147187,
+        0.5281385281385281
+      ]
+    }
+  ],
+  "round_history": [
+    {
+      "round": 1,
+      "round_time_sec": 15.48,
+      "distill_loss": 0.1487,
+      "accuracy": 0.8464,
+      "macro_f1": 0.8425,
+      "spam_f1": 0.8673,
+      "roc_auc": 0.9428,
+      "epsilon": 4.7919,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 2,
+      "round_time_sec": 15.49,
+      "distill_loss": 0.1761,
+      "accuracy": 0.6962,
+      "macro_f1": 0.6905,
+      "spam_f1": 0.7327,
+      "roc_auc": 0.801,
+      "epsilon": 7.0697,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 3,
+      "round_time_sec": 15.5,
+      "distill_loss": 0.1928,
+      "accuracy": 0.5392,
+      "macro_f1": 0.4889,
+      "spam_f1": 0.6494,
+      "roc_auc": 0.6627,
+      "epsilon": 8.9338,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 4,
+      "round_time_sec": 15.49,
+      "distill_loss": 0.1873,
+      "accuracy": 0.5461,
+      "macro_f1": 0.5248,
+      "spam_f1": 0.4242,
+      "roc_auc": 0.5295,
+      "epsilon": 10.5839,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 5,
+      "round_time_sec": 15.61,
+      "distill_loss": 0.1968,
+      "accuracy": 0.686,
+      "macro_f1": 0.6847,
+      "spam_f1": 0.7051,
+      "roc_auc": 0.7495,
+      "epsilon": 12.0971,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 6,
+      "round_time_sec": 15.76,
+      "distill_loss": 0.2061,
+      "accuracy": 0.686,
+      "macro_f1": 0.6754,
+      "spam_f1": 0.7341,
+      "roc_auc": 0.7613,
+      "epsilon": 13.513,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 7,
+      "round_time_sec": 15.69,
+      "distill_loss": 0.1668,
+      "accuracy": 0.6928,
+      "macro_f1": 0.6889,
+      "spam_f1": 0.7239,
+      "roc_auc": 0.796,
+      "epsilon": 14.8554,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 8,
+      "round_time_sec": 15.63,
+      "distill_loss": 0.1518,
+      "accuracy": 0.7816,
+      "macro_f1": 0.781,
+      "spam_f1": 0.7698,
+      "roc_auc": 0.8841,
+      "epsilon": 16.1394,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 9,
+      "round_time_sec": 15.77,
+      "distill_loss": 0.1964,
+      "accuracy": 0.5154,
+      "macro_f1": 0.3401,
+      "spam_f1": 0.6802,
+      "roc_auc": 0.7057,
+      "epsilon": 17.3758,
+      "communication_kb": 66.14
+    },
+    {
+      "round": 10,
+      "round_time_sec": 15.78,
+      "distill_loss": 0.1992,
+      "accuracy": 0.4846,
+      "macro_f1": 0.3264,
+      "spam_f1": 0.0,
+      "roc_auc": 0.5361,
+      "epsilon": 18.5723,
+      "communication_kb": 66.14
+    }
+  ],
+  "partitioning_mode": "source_based"
+}
